@@ -1,0 +1,279 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    margin: 5px 0;
+}
+
+#logo{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*Header*/
+#nav-pinterest{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    width: 1220px;
+    padding-bottom: 20px;
+    z-index: 100;
+}
+#logo-pinterest{
+    width: 27px;
+    height: 27px;
+    line-height: 27px;
+    margin-left: 20px;
+    
+    padding: 2px;
+}
+/*Botones de nav*/
+.nav-boton{
+    background-color: white;
+    padding: 0px 20px;
+    align-items: center;
+    border: none;
+    border-radius: 40px;
+    height: 7vh;
+    text-align: center;
+    font-weight: bold;
+}
+/*Hover*/
+.nav-boton:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+.nav-boton:focus{
+    background-color: black;
+    color: white;
+}
+/*Inpunt*/
+.finder{
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    width: 60%;
+    height: 45px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+}
+/*Hover Shadow*/
+.finder:hover{
+    box-shadow: 0px 0px 4px 0px #b5b5b5;
+}
+.finder i{
+    margin-right: 15px;
+    font-size: 18px;
+    color: gray;
+    cursor: pointer;
+}
+.finder input{
+    background-color: #f0f0f0;
+    flex-grow: 1;
+    margin-right: 15px;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+}
+.finder input:focus{
+    outline: none;
+}
+/*Iconos e imagen*/
+#profile-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+#profile-img:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.usuario{
+    background-color: #8bfaf8;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+}
+.usuario span{
+    font-size: 18px;
+    color: #fff;
+}
+
+/*Main*/
+
+#contenido{
+    columns: 4;
+    column-gap: 15px;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+#contenido .card-image{
+    width: 100%;
+    height: auto;
+    margin: 0 0 20px;
+    position: relative;
+    overflow: hidden;
+    break-inside: avoid;
+    border-radius: 30px;
+    background-color: #fff;
+    text-align: center;
+}
+#contenido .card-image img{
+    max-width: 100%;
+}
+
+/*Boton de Guardar*/
+
+.guardar-boton{
+    display: none;
+    position: absolute;
+    width: 7em;
+    top: 8px;
+    left: 20px;
+    padding: 10px 0px;
+    align-items: center;
+    text-align: center;
+    font-size: 1vw;
+    border: none;
+    border-radius: 40px;
+    background: #e41c24;
+    color: #fff;
+    font-weight: bold;
+}
+/*Hover*/
+.guardar-boton:hover{
+    cursor: pointer;
+    background-color: #be161b;
+}
+.guardar-boton:focus{
+    background-color: black;
+    color: white;
+}
+
+/*Boton De compartir*/
+.compartir-boton{
+    display: none;
+    position: absolute;
+    top: 8px;
+    right: 85px;
+    padding: 8px 8px;
+    width: 4em;
+    align-items: center;
+    font-size: 1vw;
+    text-align: center;
+    border: none;
+    border-radius: 40px;
+    background-color: #e41c24;
+    color: #fff;
+    font-weight: bold;
+}
+/*Hover*/
+.compartir-boton:hover{
+    cursor: pointer;
+    background-color: #be161b;
+}
+.compartir-boton:focus{
+    background-color: black;
+    color: white;
+}
+
+/*Boton de ver mas*/
+.ver-mas-boton{
+    display: none;
+    position: absolute;
+    top: 8px;
+    right: 25px;
+    padding: 8px 8px;
+    width: 4em;
+    align-items: center;
+    font-size: 1vw;
+    text-align: center;
+    border: none;
+    border-radius: 40px;
+    background-color: #e41c24;
+    color: #fff;
+    font-weight: bold;
+}
+/*Hover*/
+.ver-mas-boton:hover{
+    cursor: pointer;
+    background-color: #be161b;
+}
+.ver-mas-boton:focus{
+    background-color: black;
+    color: white;
+}
+/*Acomodo de hover en imagenes*/
+
+#contenido .card-image:hover .guardar-boton{
+    display: block;
+}
+#contenido .card-image:hover .compartir-boton{
+    display: block;
+}
+#contenido .card-image:hover .ver-mas-boton{
+    display: block;
+}
+
+#contenido .card-image:hover img{
+    filter: brightness(50%);
+    cursor: zoom-in;
+}
+
+footer{
+    font-size: 15px;
+    text-align: center;
+    color:black;
+}
+
+@media (max-width: 980px) and (min-width: 650px){
+    #contenido{
+        columns: 3;
+    }
+}
+
+@media (max-width: 650px){
+    #navbar-pinterest{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+    }
+    #navbar-pinterest button:nth-child(3){
+        display: none;
+    }
+
+    .finder{
+        display: flex;
+        align-items: center;
+        width: 30px;
+        height: 45px;
+        padding-left: 15px;
+        border-radius: 30px;
+        background-color: #f0f0f0;
+    }
+    .finder input{
+        display: none;
+    }
+
+    #contenido{
+        columns: 2;
+    }
+}
